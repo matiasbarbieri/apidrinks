@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from drinks import views
 from drinks.models import Drink
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -10,3 +11,5 @@ urlpatterns = [
 
     
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
